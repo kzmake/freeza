@@ -1,9 +1,9 @@
-package freeza
+package namec
 
 // Request ...
 type Request struct {
-	Method  string            `json:"method"`
-	URL     string            `json:"url"`
-	Body    string            `json:"body,omitempty"`
-	Headers map[string]string `json:"header,omitempty"`
+	Method string              `json:"method"`
+	URL    string              `json:"url"`
+	Body   string              `json:"body,omitempty"`
+	Header map[string][]string `json:"header,omitempty"`
 }

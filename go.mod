@@ -1,4 +1,4 @@
-module github.com/kzmake/freeza
+module github.com/kzmake/namec
 
 go 1.13
 

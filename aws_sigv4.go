@@ -1,4 +1,4 @@
-package freeza
+package namec
 
 import (
 	"bytes"
@@ -12,7 +12,7 @@ import (
 )
 
 // AWSSignV4 ...
-func AWSSignV4(req *http.Request, accessKey, secretKey string) (http.Header, error) {
+func AWSSignV4(req *http.Request, accessKey, secretKey, service, region string) (http.Header, error) {
 	signer := v4.Signer{
 		Credentials: aws.NewStaticCredentialsProvider(
 			accessKey,
@@ -24,5 +24,5 @@ func AWSSignV4(req *http.Request, accessKey, secretKey string) (http.Header, err
 	if err != nil {
 		return nil, err
 	}
-	return signer.Sign(context.Background(), req, bytes.NewReader(body), "numa", "", time.Now())
+	return signer.Sign(context.Background(), req, bytes.NewReader(body), service, region, time.Now())
 }
