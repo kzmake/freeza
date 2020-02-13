@@ -1,4 +1,4 @@
-# namec
+# namec - ナメック星
 
 [vegeta](https://github.com/tsenart/vegeta) に pipe で渡すリクエストを aws signature v4 で著名してくれるやつ
 
